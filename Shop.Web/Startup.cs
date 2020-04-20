@@ -51,8 +51,9 @@ namespace Shop.Web
             services.AddTransient<SeedDb>();
 
             //Inyecta el repositorio y el userhelper
-            services.AddScoped<IRepository, Repository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IUserHelper, UserHelper>();
+            services.AddScoped<ICountryRepository, CountryRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
